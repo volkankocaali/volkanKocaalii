@@ -2,7 +2,6 @@
 namespace App\Repositories\DeveloperTask;
 
 use App\Models\DeveloperTask;
-use App\Models\Provider;
 
 class DeveloperTaskRepository implements DeveloperTaskRepositoryInterface {
 
@@ -20,7 +19,7 @@ class DeveloperTaskRepository implements DeveloperTaskRepositoryInterface {
 
     public function create($data)
     {
-        return $this->model->create();
+        return $this->model->create($data);
     }
 
 }

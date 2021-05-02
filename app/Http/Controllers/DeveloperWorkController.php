@@ -32,7 +32,7 @@ class DeveloperWorkController extends Controller
         foreach ($tasks as $task){
             foreach ($developers as $dev){
                 if($task->level == $dev->difficulty){
-                    $this->developerTaskRepository::create([
+                    $this->developerTaskRepository->create([
                         'developer_id' => $dev->id,
                         'task_id' => $task->id,
                     ]);
